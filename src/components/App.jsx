@@ -1,6 +1,7 @@
 import React from 'react';
 import Router from './Router';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       `}</style>
       <Navbar />
       <Router />
+      <Footer />
     </div>
   );
 }
