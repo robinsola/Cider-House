@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const masterCiderList = [
   {
     name: 'Ruby Zozzle',
@@ -56,15 +54,16 @@ const masterCiderList = [
 function CiderList() {
   return (
     <div>
-      {masterCiderList.map((cider, index) =>
-      <Cider name={cider.name}
-        brewer={cider.brewer}
-        description={cider.description}
-        abv={cider.abv}
-        price={cider.price}
-        remaining={cider.remaining}
-        key={index} />
-      )}
+      <h1>Cider List</h1>
+        {masterCiderList.map((cider, index) =>
+        <Cider name={cider.name}
+          brewer={cider.brewer}
+          description={cider.description}
+          abv={cider.abv}
+          price={cider.price}
+          remaining={cider.remaining}
+          key={index} />
+        )}
     </div>
   );
 }
