@@ -8,7 +8,7 @@ function About() {
         .header {
           background: url(${interior});
           background-position: center;
-          height: 500px;
+          height: 550px;
           color: white;
           text-align: center;
         }

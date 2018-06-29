@@ -10,7 +10,7 @@ function Home() {
         .header {
           background: url(${header});
           background-position: center;
-          height: 700px;
+          height: 550px;
         }
         .header h1 {
           text-align: center;
@@ -18,13 +18,20 @@ function Home() {
           font-family: georgia;
           color: white;
           font-size: 4.5em;
-          text-shadow: 0 0 15px #F1D48D;
+          animation: flash 2s linear 0s;
+          animation-iteration-count: infinite;
         }
         .header p {
           font-size: 1.5em;
           text-align: center;
           color: white;
           padding: 10px 0 0 0;
+        }
+        @keyframes flash {
+          0% {}
+          30% {text-shadow: 0 0 20px #F1D48D}
+          70% {text-shadow: 0 0 20px #F1D48D}
+          100% {}
         }
       `}</style>
       <div className="header">

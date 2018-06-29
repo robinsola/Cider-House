@@ -82,7 +82,7 @@ function CiderList() {
         .title {
           background: url(${pint});
           background-position: top;
-          height: 500px;
+          height: 550px;
           color: white;
           text-align: center;
         }
