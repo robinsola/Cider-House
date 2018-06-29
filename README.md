@@ -9,13 +9,13 @@
 * In terminal, run `$ npm install` in project folder home directory
 * In terminal, run `$ npm run start` to view in browser
 
-### Brainstorming
+### Brainstorming / Notes
 Image of project structure, breaking down content into React components:
 
 ![project structure](./structure.jpg)
 
 ### Known Bugs
-Include bugs and contact information.
+No bugs
 
 ### Technologies and Resources
 * npm / webpack
