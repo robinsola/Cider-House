@@ -10,6 +10,10 @@ function App() {
           margin: 0;
           padding: 0;
         }
+        body {
+          font-family: sans-serif;
+          font-weight: 100;
+        }
       `}</style>
       <Navbar />
       <Router />

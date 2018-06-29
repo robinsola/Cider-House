@@ -12,12 +12,11 @@ function Navbar() {
           display: flex;
           justify-content: center;
           list-style: none;
-          background-color: black;
+          background-color: #383838;
         }
         li {
           color: white;
-          margin: 0 30px;
-          padding: 10px;
+          padding: 10px 30px;
           transition: background-color .5s;
         }
         li:hover {
