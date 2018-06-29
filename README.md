@@ -1,8 +1,8 @@
-# React Template
-##### Robin Sola // June 28, 2018
+# Cider House
+##### Robin Sola // June 29, 2018
 ---
 ### Description
-Include description of project.
+ Website of a cider house built using React. Meet the crew, view the taproom list, buy a pint, make edits to existing kegs, and tap a new keg to add to the list.
 
 ### Installation
 * Clone project folder in terminal: `$ git clone` repository url
@@ -10,25 +10,14 @@ Include description of project.
 * In terminal, run `$ npm run start` to view in browser
 
 ### Brainstorming
-Include planning and brainstorming process.
+Image of project structure, breaking down content into React components:
 
-### Images
-Include images showing responsiveness and details.
-
-##### Desktop Version
-
-![desktop user interface](img url)
-
-##### Mobile Version
-
-![mobile user interface](img url)
-
+![project structure](./structure.jpg)
 
 ### Known Bugs
 Include bugs and contact information.
 
 ### Technologies and Resources
-* Sketch
 * npm / webpack
 * REACT
 * HTML
