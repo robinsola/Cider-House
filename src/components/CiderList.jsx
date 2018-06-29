@@ -1,5 +1,6 @@
 import React from 'react';
 import Cider from './Cider';
+import pint from '../assets/images/pint.jpeg';
 import angryOrchard from '../assets/images/angry-orchard-logo.png';
 import austinEastciders from '../assets/images/austin-eastciders-logo.png';
 import jacksCider from '../assets/images/jacks-cider-logo.png';
@@ -79,18 +80,33 @@ function CiderList() {
     <div>
       <style jsx>{`
         .title {
+          background: url(${pint});
+          background-position: top;
+          height: 500px;
+          color: white;
           text-align: center;
-          margin: 20px 0 40px 0;
         }
-        .body {
-          margin: 0 0 0 40px;
+        h1 {
+          padding: 70px 0 0 0;
+          font-family: georgia;
+          color: white;
+          font-size: 4.5em;
+          text-shadow: 0 0 15px #F1D48D;
+        }
+        p {
+          font-size: 1.5em;
+          color: black;
+          padding: 10px 0 0 0;
+        }
+        .wrapper {
+          margin: 0 40px;
         }
       `}</style>
       <div className="title">
-        <h1>Cider List</h1>
-        <p>7 Rotating Taps of Craft Ciders</p>
+        <h1>What's on tap?</h1>
+        <p><em>7 rotating taps of craft ciders</em></p>
       </div>
-      <div className="body">
+      <div className="wrapper">
         {masterCiderList.map((cider, index) =>
           <Cider name={cider.name}
             brewer={cider.brewer}

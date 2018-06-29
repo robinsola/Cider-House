@@ -6,11 +6,11 @@ function Cider(props) {
     <div>
       <style jsx>{`
         img {
-          width: 150px;
+          width: 180px;
         }
         p:nth-of-type(3) {
-          font-weight: 400;
-          color: orange;
+          font-weight: 600;
+          color: #00b300;
         }
         .ciderGroup {
           display: flex;
@@ -27,10 +27,10 @@ function Cider(props) {
           <img src={props.image}/>
         </div>
         <div className="ciderInfo">
-          <h3>{props.name}, {props.brewer}</h3>
+          <h2>{props.name}, {props.brewer}</h2>
           <p>{props.description}</p>
           <p>abv: {props.abv}</p>
-          <p>${props.price} / pint</p>
+          <p>${props.price} pints</p>
           <p>pints left: {props.remaining}</p>
         </div>
       </div>
