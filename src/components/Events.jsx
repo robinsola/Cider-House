@@ -20,6 +20,14 @@ function Events() {
           margin: 0 0 0 40px;
           line-height: 30px;
         }
+        @media only screen and (max-width: 1050px) {
+          .eventGroup {
+            display: block;
+          }
+          .eventInfo {
+            margin: 20px 0;
+          }
+        }
       `}</style>
     <h3><em>Upcoming Events</em></h3>
       <div className="eventGroup">
