@@ -21,6 +21,9 @@ function Events() {
           line-height: 30px;
         }
         @media only screen and (max-width: 1050px) {
+          img {
+            width: 100%;
+          }
           .eventGroup {
             display: block;
           }
