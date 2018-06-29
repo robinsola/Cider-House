@@ -20,7 +20,7 @@ function Navbar() {
           transition: background-color .5s;
         }
         li:hover {
-          background-color: red;
+          background-color: #2AAEFF;
         }
       `}</style>
       <ul>
