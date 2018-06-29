@@ -7,7 +7,23 @@ function Navbar() {
   };
   return (
     <div>
-      <h1>Cider House</h1>
+      <style jsx>{`
+        ul {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          background-color: black;
+        }
+        li {
+          color: white;
+          margin: 0 30px;
+          padding: 10px;
+          transition: background-color .5s;
+        }
+        li:hover {
+          background-color: red;
+        }
+      `}</style>
       <ul>
         <Link to ='/' style={linkStyles}><li>Home</li></Link>
         <Link to ='/About' style={linkStyles}><li>About Us</li></Link>
