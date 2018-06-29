@@ -12,7 +12,8 @@ function Navbar() {
           display: flex;
           justify-content: center;
           list-style: none;
-          background-color: #383838;
+          background-color: #221800;
+          border-bottom: 1.5px solid white;
         }
         li {
           color: white;
@@ -20,7 +21,7 @@ function Navbar() {
           transition: background-color .5s;
         }
         li:hover {
-          background-color: #2AAEFF;
+          background-color: #E4BC5E;
         }
       `}</style>
       <ul>

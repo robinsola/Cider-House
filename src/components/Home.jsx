@@ -27,7 +27,7 @@ function Home() {
       `}</style>
       <div className="header">
         <h1>The Cider House</h1>
-        <p>Open Every Day at Noon</p>
+        <p>Open Daily from Noon to Midnight</p>
       </div>
     </div>
   );
