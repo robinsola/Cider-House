@@ -16,10 +16,13 @@ function Cider(props) {
           display: flex;
           align-items: center;
           padding 40px;
-          border-bottom: 1px solid gray;
         }
         .ciderInfo {
           margin: 0 0 0 40px;
+        }
+        @media only screen and (max-width: 1050px) {
+          .ciderGroup {
+            border-bottom: 1px solid gray;
         }
       `}</style>
       <div className="ciderGroup">

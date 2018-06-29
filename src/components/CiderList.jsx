@@ -99,7 +99,14 @@ function CiderList() {
           padding: 10px 0 0 0;
         }
         .wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 50px;
           margin: 0 40px;
+        }
+        @media only screen and (max-width: 1050px) {
+          .wrapper {
+            grid-template-columns: 1fr;
         }
       `}</style>
       <div className="title">
