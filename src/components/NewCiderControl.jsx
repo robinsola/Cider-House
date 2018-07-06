@@ -34,6 +34,6 @@ class NewCiderControl extends React.Component {
 
 NewCiderControl.propTypes = {
   onAddNewCider: PropTypes.func
-}
+};
 
 export default NewCiderControl;

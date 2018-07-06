@@ -39,10 +39,10 @@ function CiderList(props) {
       `}</style>
       <div className="title">
         <h1>What's on tap?</h1>
-        <p><em>7 rotating taps of craft ciders</em></p>
+        <p><em>Plenty of rotating taps of craft ciders</em></p>
       </div>
       <div className="wrapper">
-        {props.ciderList.map((cider, index) =>
+        {props.ciderList.map((cider) =>
           <Cider name={cider.name}
             brewer={cider.brewer}
             description={cider.description}
@@ -50,7 +50,7 @@ function CiderList(props) {
             price={cider.price}
             remaining={cider.remaining}
             image={cider.image}
-            key={index} />
+            key={cider.id} />
         )}
       </div>
     </div>

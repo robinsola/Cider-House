@@ -25,7 +25,8 @@ class  Router extends React.Component {
           abv: '6.9%',
           price: '7',
           remaining: '20',
-          image: pdxCider
+          image: pdxCider,
+          id: 1
         },
         {
           name: 'Fever Bark Tonic',
@@ -34,7 +35,8 @@ class  Router extends React.Component {
           abv: '6.3%',
           price: '6',
           remaining: '60',
-          image: squareMile
+          image: squareMile,
+          id: 2
         },
         {
           name: 'Ruby Red Grapefruit',
@@ -43,7 +45,8 @@ class  Router extends React.Component {
           abv: '4.7%',
           price: '3',
           remaining: '65',
-          image: austinEastciders
+          image: austinEastciders,
+          id: 3
         },
         {
           name: 'Peach',
@@ -52,7 +55,8 @@ class  Router extends React.Component {
           abv:  '5.9%',
           price: '6',
           remaining: '75',
-          image: jacksCider
+          image: jacksCider,
+          id: 4
         },
         {
           name: 'Rose\' Hard Cider',
@@ -61,7 +65,8 @@ class  Router extends React.Component {
           abv:  '7.5%',
           price: '6',
           remaining: '18',
-          image: angryOrchard
+          image: angryOrchard,
+          id: 5
         },
         {
           name: 'Apple Ginger Cider',
@@ -70,7 +75,8 @@ class  Router extends React.Component {
           abv:  '5.5%',
           price: '6',
           remaining: '58',
-          image: lonetree
+          image: lonetree,
+          id: 6
         },
         {
           name: 'Amber',
@@ -79,7 +85,8 @@ class  Router extends React.Component {
           abv: '6.9%',
           price: '7',
           remaining: '20',
-          image: woodchuck
+          image: woodchuck,
+          id: 7
         }
       ]
     };
