@@ -83,6 +83,13 @@ class  Router extends React.Component {
         }
       ]
     };
+    this.handleCiderSubmission = this.handleCiderSubmission.bind(this);
+  }
+
+  handleCiderSubmission(newCider) {
+    var newMasterCiderList = this.state.masterCiderList.slice();
+    newMasterCiderList.push(newCider);
+    this.setState({masterCiderList: newMasterCiderList});
   }
 
   render() {
@@ -90,7 +97,7 @@ class  Router extends React.Component {
       <div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/Admin' component={NewCiderControl} />
+          <Route path='/Admin' render={()=><NewCiderControl onAddNewCider={this.handleCiderSubmission}/>} />
           <Route path='/About' component={About} />
           <Route path='/CiderList' render={()=><CiderList ciderList={this.state.masterCiderList}/>} />
           <Route component={Error404} />
