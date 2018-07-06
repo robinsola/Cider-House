@@ -88,8 +88,8 @@ class  Router extends React.Component {
   }
 
   handleCiderSubmission(newCider) {
-    var newCiderId = v4()
-    var newMasterCiderList = Object.assign({}, this.state.masterCiderList, {[newCider.id]: newCider});
+    var newCiderId = v4();
+    var newMasterCiderList = Object.assign({}, this.state.masterCiderList, {[newCiderId]: newCider});
     this.setState({masterCiderList: newMasterCiderList});
   }
 
