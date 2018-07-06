@@ -15,14 +15,14 @@ Image of project structure, breaking down content into React components:
 ![project structure](./diagram.jpg)
 
 Plan:
-* Create App as State and lift Cider List into App, to allow for inverse data flow from Cider Control.
+* Create Router as State and lift Cider List into Router, to allow for inverse data flow from Cider Control.
 * Create Add Cider Form component with form for user event to submit a new tapped cider keg to list of Ciders.
-* Buy A Pint function component - click button to empty a keg / stretch goal: set interval so keg gradually empties with alert when low.
+* Buy A Pint function component - click button to empty a keg
 * Create EventList in Home with Home being a state-full component with EventControl State component and functionality to add new Events to list (similar to Add cider set up - stretch goal!)
 * Admin Component - to edit and monitor cider keg list and event list.
 
 ### Known Bugs
-No bugs
+Work in progress
 
 ### Technologies and Resources
 * npm / webpack
