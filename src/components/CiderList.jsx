@@ -59,6 +59,6 @@ function CiderList(props) {
 
 CiderList.propTypes = {
   ciderList: PropTypes.array
-}
+};
 
 export default CiderList;

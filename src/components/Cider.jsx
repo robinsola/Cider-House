@@ -36,6 +36,9 @@ function Cider(props) {
           <p>${props.price} pints</p>
           <p>pints left: {props.remaining}</p>
         </div>
+        <div className="buyPintBtn">
+          <button>Buy Pint</button>
+        </div>
       </div>
     </div>
   );

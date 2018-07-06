@@ -12,7 +12,6 @@ import pdxCider from '../assets/images/pdx-cider-logo.png';
 import woodchuck from '../assets/images/woodchuck-logo.png';
 import squareMile from '../assets/images/squaremile-logo.png';
 
-
 class  Router extends React.Component {
   constructor(props) {
     super(props);
@@ -84,6 +83,7 @@ class  Router extends React.Component {
       ]
     };
   }
+
   render() {
     return (
       <div>
