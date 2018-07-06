@@ -32,7 +32,7 @@ function Events() {
           }
         }
       `}</style>
-    <h3><em>Upcoming Events</em></h3>
+      <h3><em>Upcoming Events</em></h3>
       <div className="eventGroup">
         <div className="eventImg">
           <img src={ciderWeek}/>
