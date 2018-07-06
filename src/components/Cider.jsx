@@ -37,7 +37,7 @@ function Cider(props) {
           <p>pints left: {props.remaining}</p>
         </div>
         <div className="buyPintBtn">
-          <button>Buy Pint</button>
+          <button onClick={() => {alert('enjoy your ' + props.name);}}>Buy Pint</button>
         </div>
       </div>
     </div>
