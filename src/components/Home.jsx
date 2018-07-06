@@ -1,6 +1,5 @@
 import React from 'react';
 import header from '../assets/images/header.jpeg';
-import ciderWeek from '../assets/images/cider-week.jpeg';
 import Events from './Events';
 
 function Home() {
