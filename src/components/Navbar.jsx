@@ -28,6 +28,7 @@ function Navbar() {
         <Link to ='/' style={linkStyles}><li>Home</li></Link>
         <Link to ='/About' style={linkStyles}><li>About Us</li></Link>
         <Link to ='/CiderList' style={linkStyles}><li>Taproom</li></Link>
+        <Link to ='/Admin' style={linkStyles}><li>Admin LogIn</li></Link>
       </ul>
     </div>
   );
