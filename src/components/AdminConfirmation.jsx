@@ -6,13 +6,13 @@ function AdminConfirmation(props) {
     <div>
       <h1>Please Enter Admin Password:</h1>
       <input type="password" id="adminPassword"/>
-      <button onClick={props.onConfirmation}>enter</button>
+      <button onClick={props.onAdminConfirmation}>enter</button>
     </div>
   );
 }
 
 AdminConfirmation.propTypes = {
-  onConfirmation: PropTypes.func
-}
+  onAdminConfirmation: PropTypes.func
+};
 
 export default AdminConfirmation;

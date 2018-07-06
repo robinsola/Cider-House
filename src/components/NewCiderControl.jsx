@@ -19,9 +19,9 @@ class NewCiderControl extends React.Component {
   render() {
     let visibleContent = null;
     if (this.state.formVisibleOnPage) {
-      visibleContent = <NewCiderForm />
+      visibleContent = <NewCiderForm />;
     } else {
-      visibleContent = <AdminConfirmation onAdminConfirmation={this.handleAdminConfirmation} />
+      visibleContent = <AdminConfirmation onAdminConfirmation={this.handleAdminConfirmation} />;
     }
     return (
       <div>
