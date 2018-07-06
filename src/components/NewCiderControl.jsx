@@ -1,5 +1,6 @@
 import React from 'react';
 import AdminConfirmation from './AdminConfirmation';
+import NewCiderForm from './NewCiderForm';
 
 class NewCiderControl extends React.Component {
 
