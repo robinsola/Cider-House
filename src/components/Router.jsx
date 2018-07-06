@@ -5,7 +5,6 @@ import About from './About';
 import CiderList from './CiderList';
 import Error404 from './Error404';
 import NewCiderControl from './NewCiderControl';
-import Admin from './Admin';
 import angryOrchard from '../assets/images/angry-orchard-logo.png';
 import austinEastciders from '../assets/images/austin-eastciders-logo.png';
 import jacksCider from '../assets/images/jacks-cider-logo.png';
@@ -91,8 +90,8 @@ class  Router extends React.Component {
       <div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/Admin' component={Admin} />
-          <Route path='/About' component={NewCiderControl} />
+          <Route path='/Admin' component={NewCiderControl} />
+          <Route path='/About' component={About} />
           <Route path='/CiderList' render={()=><CiderList ciderList={this.state.masterCiderList}/>} />
           <Route component={Error404} />
         </Switch>
