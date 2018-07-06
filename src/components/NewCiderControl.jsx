@@ -7,12 +7,18 @@ class NewCiderControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(){
+    this.setState({formVisibleOnPage: true});
+    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   }
 
   render() {
     return (
       <div>
-        <p>New Cider Control Page!</p>
+        <p onClick={this.handleClick}>Click to change state</p>
       </div>
     );
   }
