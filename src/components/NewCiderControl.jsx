@@ -1,6 +1,7 @@
 import React from 'react';
 import AdminConfirmation from './AdminConfirmation';
 import NewCiderForm from './NewCiderForm';
+import PropTypes from 'prop-types';
 
 class NewCiderControl extends React.Component {
 
@@ -19,7 +20,7 @@ class NewCiderControl extends React.Component {
   render() {
     let visibleContent = null;
     if (this.state.formVisibleOnPage) {
-      visibleContent = <NewCiderForm />;
+      visibleContent = <NewCiderForm onAddNewCider={this.props.onAddNewCider}/>;
     } else {
       visibleContent = <AdminConfirmation onAdminConfirmation={this.handleAdminConfirmation} />;
     }
@@ -29,6 +30,10 @@ class NewCiderControl extends React.Component {
       </div>
     );
   }
+}
+
+NewCiderControl.propTypes = {
+  onAddNewCider: PropTypes.func
 }
 
 export default NewCiderControl;
