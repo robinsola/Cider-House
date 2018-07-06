@@ -12,13 +12,14 @@ import lonetree from '../assets/images/lonetree-logo.png';
 import pdxCider from '../assets/images/pdx-cider-logo.png';
 import woodchuck from '../assets/images/woodchuck-logo.png';
 import squareMile from '../assets/images/squaremile-logo.png';
+import { v4 } from 'uuid';
 
 class  Router extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterCiderList: [
-        {
+      masterCiderList: {
+        '1': {
           name: 'Union Jack',
           brewer: 'Portland Cider Co',
           description: 'Oregon grown apples in a truly authentic English Cider',
@@ -26,9 +27,8 @@ class  Router extends React.Component {
           price: '7',
           remaining: '20',
           image: pdxCider,
-          id: 1
         },
-        {
+        '2': {
           name: 'Fever Bark Tonic',
           brewer: 'Square Mile Cider Co',
           description: 'Juniper berries and Cinchona bark blended in classic dry NW apple cider',
@@ -36,9 +36,8 @@ class  Router extends React.Component {
           price: '6',
           remaining: '60',
           image: squareMile,
-          id: 2
         },
-        {
+        '3': {
           name: 'Ruby Red Grapefruit',
           brewer: 'Austin Eastciders',
           description: 'Zippy, zesty, and refreshingly dry, from Austin Texas',
@@ -46,9 +45,8 @@ class  Router extends React.Component {
           price: '3',
           remaining: '65',
           image: austinEastciders,
-          id: 3
         },
-        {
+        '4': {
           name: 'Peach',
           brewer: 'Jack\'s Hard Cider',
           description: 'Light and fruity with a flirty peach aroma',
@@ -56,9 +54,8 @@ class  Router extends React.Component {
           price: '6',
           remaining: '75',
           image: jacksCider,
-          id: 4
         },
-        {
+        '5': {
           name: 'Rose\' Hard Cider',
           brewer: 'Angry Orchard',
           description: 'Rare French apples and a kiss of hibiscus, similar to a semi-dry wine',
@@ -66,9 +63,8 @@ class  Router extends React.Component {
           price: '6',
           remaining: '18',
           image: angryOrchard,
-          id: 5
         },
-        {
+        '6': {
           name: 'Apple Ginger Cider',
           brewer: 'Lonetree',
           description: 'British-Columbia craft cider with a zesty twist of real ginger',
@@ -76,9 +72,8 @@ class  Router extends React.Component {
           price: '6',
           remaining: '58',
           image: lonetree,
-          id: 6
         },
-        {
+        '7': {
           name: 'Amber',
           brewer: 'Woodchuck Hard Cider',
           description: 'blend of apples and fermented with Champagne, the original blend from Middlebury, Vermont',
@@ -86,16 +81,15 @@ class  Router extends React.Component {
           price: '7',
           remaining: '20',
           image: woodchuck,
-          id: 7
         }
-      ]
+      }
     };
     this.handleCiderSubmission = this.handleCiderSubmission.bind(this);
   }
 
   handleCiderSubmission(newCider) {
-    var newMasterCiderList = this.state.masterCiderList.slice();
-    newMasterCiderList.push(newCider);
+    var newCiderId = v4()
+    var newMasterCiderList = Object.assign({}, this.state.masterCiderList, {[newCider.id]: newCider});
     this.setState({masterCiderList: newMasterCiderList});
   }
 

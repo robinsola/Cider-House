@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
+
 
 function NewCiderForm(props) {
   let _name = null;
@@ -13,7 +13,7 @@ function NewCiderForm(props) {
 
   function handleCiderSubmission(event) {
     event.preventDefault();
-    props.onAddNewCider({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, image: _image.value, id: v4});
+    props.onAddNewCider({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, image: _image.value});
     _name.value = '';
     _brewer.value = '';
     _description.value = '';

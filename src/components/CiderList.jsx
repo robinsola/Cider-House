@@ -39,26 +39,28 @@ function CiderList(props) {
       `}</style>
       <div className="title">
         <h1>What's on tap?</h1>
-        <p><em>Plenty of rotating taps of craft ciders</em></p>
+        <p><em>Rotating taps of craft ciders</em></p>
       </div>
       <div className="wrapper">
-        {props.ciderList.map((cider) =>
-          <Cider name={cider.name}
+        {Object.keys(props.ciderList).map(function(ciderId) {
+          var cider = props.ciderList[ciderId];
+          return <Cider name={cider.name}
             brewer={cider.brewer}
             description={cider.description}
             abv={cider.abv}
             price={cider.price}
             remaining={cider.remaining}
             image={cider.image}
-            key={cider.id} />
-        )}
+            key={ciderId}
+            ciderId={ciderId} />
+        })}
       </div>
     </div>
   );
 }
 
 CiderList.propTypes = {
-  ciderList: PropTypes.array
+  ciderList: PropTypes.object
 };
 
 export default CiderList;
