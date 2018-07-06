@@ -52,7 +52,7 @@ function CiderList(props) {
             remaining={cider.remaining}
             image={cider.image}
             key={ciderId}
-            ciderId={ciderId} />
+            ciderId={ciderId} />;
         })}
       </div>
     </div>
