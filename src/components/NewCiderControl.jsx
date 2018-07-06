@@ -1,4 +1,5 @@
 import React from 'react';
+import AdminConfirmation from './AdminConfirmation';
 
 class NewCiderControl extends React.Component {
 
@@ -7,18 +8,23 @@ class NewCiderControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleAdminConfirmation = this.handleAdminConfirmation.bind(this);
   }
 
-  handleClick(){
+  handleAdminConfirmation() {
     this.setState({formVisibleOnPage: true});
-    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   }
 
   render() {
+    let visibleContent = null;
+    if (this.state.formVisibleOnPage) {
+      visibleContent = <NewCiderForm />
+    } else {
+      visibleContent = <AdminConfirmation onAdminConfirmation={this.handleAdminConfirmation} />
+    }
     return (
       <div>
-        <p onClick={this.handleClick}>Click to change state</p>
+        {visibleContent}
       </div>
     );
   }
