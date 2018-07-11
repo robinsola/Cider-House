@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Cider(props) {
+
   return (
     <div>
       <style jsx>{`
@@ -37,7 +38,7 @@ function Cider(props) {
           <p>pints left: {props.remaining}</p>
         </div>
         <div className="buyPintBtn">
-          <button onClick={() => {alert('enjoy your ' + props.name);}}>Buy Pint</button>
+          <button onClick={() => props.onBuyPintClicked(props.ciderId)}>Buy Pint</button>
         </div>
       </div>
     </div>
@@ -50,8 +51,10 @@ Cider.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.string,
   price: PropTypes.string,
-  remaining: PropTypes.string,
-  image: PropTypes.string
+  remaining: PropTypes.number,
+  image: PropTypes.string,
+  ciderId: PropTypes.string,
+  onBuyPintClicked: PropTypes.func
 };
 
 export default Cider;
