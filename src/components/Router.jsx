@@ -25,7 +25,7 @@ class  Router extends React.Component {
           description: 'Oregon grown apples in a truly authentic English Cider',
           abv: '6.9%',
           price: '7',
-          remaining: '20',
+          remaining: 20,
           image: pdxCider,
         },
         '2': {
@@ -34,7 +34,7 @@ class  Router extends React.Component {
           description: 'Juniper berries and Cinchona bark blended in classic dry NW apple cider',
           abv: '6.3%',
           price: '6',
-          remaining: '60',
+          remaining: 60,
           image: squareMile,
         },
         '3': {
@@ -43,7 +43,7 @@ class  Router extends React.Component {
           description: 'Zippy, zesty, and refreshingly dry, from Austin Texas',
           abv: '4.7%',
           price: '3',
-          remaining: '65',
+          remaining: 65,
           image: austinEastciders,
         },
         '4': {
@@ -52,7 +52,7 @@ class  Router extends React.Component {
           description: 'Light and fruity with a flirty peach aroma',
           abv:  '5.9%',
           price: '6',
-          remaining: '75',
+          remaining: 75,
           image: jacksCider,
         },
         '5': {
@@ -61,7 +61,7 @@ class  Router extends React.Component {
           description: 'Rare French apples and a kiss of hibiscus, similar to a semi-dry wine',
           abv:  '7.5%',
           price: '6',
-          remaining: '18',
+          remaining: 18,
           image: angryOrchard,
         },
         '6': {
@@ -70,7 +70,7 @@ class  Router extends React.Component {
           description: 'British-Columbia craft cider with a zesty twist of real ginger',
           abv:  '5.5%',
           price: '6',
-          remaining: '58',
+          remaining: 58,
           image: lonetree,
         },
         '7': {
@@ -79,17 +79,24 @@ class  Router extends React.Component {
           description: 'blend of apples and fermented with Champagne, the original blend from Middlebury, Vermont',
           abv: '6.9%',
           price: '7',
-          remaining: '20',
+          remaining: 20,
           image: woodchuck,
         }
       }
     };
     this.handleCiderSubmission = this.handleCiderSubmission.bind(this);
+    this.handleBuyPintClicked = this.handleBuyPintClicked.bind(this);
   }
 
   handleCiderSubmission(newCider) {
     var newCiderId = v4();
     var newMasterCiderList = Object.assign({}, this.state.masterCiderList, {[newCiderId]: newCider});
+    this.setState({masterCiderList: newMasterCiderList});
+  }
+
+  handleBuyPintClicked(ciderId) {
+    let newMasterCiderList = Object.assign({}, this.state.masterCiderList);
+    newMasterCiderList[ciderId].remaining -= 1;
     this.setState({masterCiderList: newMasterCiderList});
   }
 
@@ -100,7 +107,7 @@ class  Router extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/Admin' render={()=><NewCiderControl onAddNewCider={this.handleCiderSubmission}/>} />
           <Route path='/About' component={About} />
-          <Route path='/CiderList' render={()=><CiderList ciderList={this.state.masterCiderList}/>} />
+          <Route path='/CiderList' render={()=><CiderList ciderList={this.state.masterCiderList} onBuyPintClicked={this.handleBuyPintClicked}/>} />
           <Route component={Error404} />
         </Switch>
       </div>
