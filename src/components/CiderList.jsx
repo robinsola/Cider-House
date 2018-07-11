@@ -44,7 +44,8 @@ function CiderList(props) {
       <div className="wrapper">
         {Object.keys(props.ciderList).map(function(ciderId) {
           var cider = props.ciderList[ciderId];
-          return <Cider name={cider.name}
+          return <Cider onBuyPintClicked={props.onBuyPintClicked}
+            name={cider.name}
             brewer={cider.brewer}
             description={cider.description}
             abv={cider.abv}
@@ -60,7 +61,8 @@ function CiderList(props) {
 }
 
 CiderList.propTypes = {
-  ciderList: PropTypes.object
+  ciderList: PropTypes.object,
+  onBuyPintClicked: PropTypes.func
 };
 
 export default CiderList;
