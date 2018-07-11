@@ -18,9 +18,16 @@ function AdminConfirmation(props) {
         }
         input {
           height: 30px;
-          width: 230px;
           border: 1px solid #221800;
           border-radius: 5px;
+          padding: 5px;
+          width: 100px;
+          transition: width .35s ease-in-out;
+        }
+        input:focus {
+          box-shadow: 2px 5px 5px black;
+          width: 250px;
+          outline: none;
         }
         button {
           cursor: pointer;

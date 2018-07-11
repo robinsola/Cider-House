@@ -38,11 +38,16 @@ function NewCiderForm(props) {
         }
         input {
           height: 30px;
-          width: 230px;
           border: 1px solid #221800;
           border-radius: 5px;
           margin: 5px 0 15px 0;
           padding: 5px;
+          width: 250px;
+          transition: ease-in-out, border .35s ease-in-out;
+        }
+        input:focus {
+          border: 1px solid #E4BC5E;
+          outline: none;
         }
         button {
           cursor: pointer;
