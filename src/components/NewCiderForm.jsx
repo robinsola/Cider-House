@@ -42,6 +42,7 @@ function NewCiderForm(props) {
           border: 1px solid #221800;
           border-radius: 5px;
           margin: 5px 0 15px 0;
+          padding: 5px;
         }
         button {
           cursor: pointer;
