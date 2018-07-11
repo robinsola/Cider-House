@@ -13,7 +13,7 @@ function NewCiderForm(props) {
 
   function handleCiderSubmission(event) {
     event.preventDefault();
-    props.onAddNewCider({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, image: _image.value});
+    props.onAddNewCider({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: parseInt(_remaining.value), image: _image.value});
     alert(_name.value +' has been added to the Taproom!');
     _name.value = '';
     _brewer.value = '';
