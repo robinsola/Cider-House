@@ -1,6 +1,9 @@
 # Cider House
 ##### Robin Sola // June 29, 2018
 ---
+
+![home page](./screen_shot.png)
+
 ### Description
  Website of a cider house built using React. Meet the crew, view the taproom list, buy a pint, make edits to existing kegs, and tap a new keg to add to the list.
 
@@ -22,7 +25,7 @@ Plan:
 * Admin Component - to edit and monitor cider keg list and event list.
 
 ### Known Bugs
-Work in progress
+No bugs right now
 
 ### Technologies and Resources
 * npm / webpack
