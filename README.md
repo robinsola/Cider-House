@@ -5,7 +5,7 @@
 ![home page](./screen_shot.png)
 
 ### Description
- Website of a cider house built using React. Meet the crew, view the taproom list, buy a pint, make edits to existing kegs, and tap a new keg to add to the list.
+ Responsive website and design of a cider house, built using React and JSX. View the taproom list, buy a pint, and add a new keg to the taproom list.
 
 ### Installation
 * Clone project folder in terminal: `$ git clone` repository url
